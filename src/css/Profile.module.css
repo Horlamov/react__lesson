@@ -1,0 +1,12 @@
+.content {
+  grid-area: c;
+  background-color: rgba(114, 199, 159, 0.836);
+}
+
+.content img {
+  max-width: 800px;
+}
+
+.item {
+  color: brown;
+}
