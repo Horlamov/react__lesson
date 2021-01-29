@@ -12,8 +12,8 @@ return (
     <button>Delete post</button>
   </div>
   <div className={s.posts}>
-    <Post />
-    <Post />
+    <Post message='Hi, how are you?' likecount=" 15"/>
+    <Post message="It's my first post" likecount=" 20"/>
     <Post />
   </div>
 </div>
