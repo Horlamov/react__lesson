@@ -1,20 +1,29 @@
 import React from 'react';
+import { BrowserRouter, Route } from 'react-router-dom';
 import './App.css'
 import Dialogs from './components/Dialogs/Dialogs';
+import Music from './components/Music/Music';
 import Header from './components/Header/Header';
 import Navbar from './components/Navbar/Navbar';
 import Profile from './components/Profile/Profile';
+import Settings from './components/Settings/Settings';
+import News from './components/News/News';
 
 const App = (props) => {
   return (
-    <div className='app-wrapper'>
-      <Header />
-      <Navbar />
-      <div class='app-wrapper-content'>
-        <Dialogs />
+    <BrowserRouter>
+      <div className='app-wrapper'>
+        <Header />
+        <Navbar />
+        <div className='app-wrapper-content'>
+          <Route path='/dialogs' component={Dialogs} />
+          <Route path='/profile' component={Profile} />
+          <Route path='/music' component={Music} />
+          <Route path='/news' component={News} />
+          <Route path='/settings' component={Settings} />
+        </div>
       </div>
-      {/* <Profile /> */}
-    </div>
+    </BrowserRouter>
   );
 }
 
